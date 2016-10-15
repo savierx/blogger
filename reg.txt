@@ -1,9 +1,0 @@
-Course	Sec	Cr	Campus	Instructor	Seating	Status	Areas of Study
-EFN402 		1.0 	M 	Makatiani 	2282/3000/0 	Registered 	
-EMP401 		1.0 	M 	Kinyanjui 	2364/4000/0 	Registered 	
-EPS400 		1.0 	M 	mutweleli 	2341/4000/0 	Registered 	
-ERC304 		1.0 	M 	aloo 	124/200/0 	Registered 	
-KEE400 		0.0 	M 	macharia 	52/200/0 	Registered 	
-KRM402 		1.0 	M 	Waswa 	78/300/0 	Registered 	
-KRM412 		1.0 	M 	Orinda 	53/2000/0 	Registered 	
-SBT420 		1.0 	M 	Omwoyo 	151/300/0 	Registered 	

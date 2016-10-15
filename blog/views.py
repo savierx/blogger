@@ -5,23 +5,12 @@ from django.db.models import Q
 from django.template import loader, Context
 from django.http import HttpResponse
 from blog.models import BlogPost, Art, Category
-from django.views.generic import *
-from django.urls import reverse
 
-class ArchiveView(ListView):
-    template_name = 'blog/archive.html'
-    context_object_name = 'posts'
-    #c = Context({ 'posts': posts })
-    
-    def get_queryset(self):
-        return BlogPost.objects.all()
-
-    def get_context_data(self, **kwargs):
-        return render('template_name','context')
-    
-    
-    #return HttpResponse(t.render(c))
-
+def archive(request):
+    posts = BlogPost.objects.all()
+    t = loader.get_template("archive.html")
+    c = Context({ 'posts': posts })
+    return HttpResponse(t.render(c))
 
 #cms
 def category(request, slug):
@@ -43,14 +32,3 @@ def search(request):
         heading = "Search results"
     return render_to_response("blog/art_list.html", locals())
 
-class CategoryView(DetailView):
-    model = Category
-    template_name = 'blog/art_list.html'
-
-class ArtView(DetailView):
-    model = BlogPost
-    template_name = 'blog/art_detail.html'
-
-class HomeView(ListView):
-    model = Art
-    template_name = 'blog/art_list.html'
