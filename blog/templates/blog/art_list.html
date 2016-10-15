@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% if heading %}
+        <h1>{{ heading }}</h1>
+    {% endif %}
+    <ul id="art-list">
+    {% for art in art_list %}
+        <li><a href="{{ art.get_absolute_url }}">{{art.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
