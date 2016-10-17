@@ -10,7 +10,7 @@ import os
 import sys
 
 from django.core.wsgi import get_wsgi_application
-path = 'C:\Users\Kurgat\AppData\Local\Programs\Python\Python35\Scripts\blogger'
+path = 'Users\Kurgat\AppData\Local\Programs\Python\Python35\Scripts\blogger'
 if path not in sys.path:
     sys.path.append(path)
 

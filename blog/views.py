@@ -8,6 +8,19 @@ from blog.models import BlogPost, Art, Category
 from django.views.generic import *
 from django.urls import reverse
 
+def index(request):
+    return HttpResponse('hola')
+
+def detail(request, slug):
+    return HttpResponse("You're looking at question %s." % slug)
+
+def results(request, slug):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % slug)
+
+def vote(request, pk):
+    return HttpResponse("You're voting on question %s." % pk)
+##############################
 class ArchiveView(ListView):
     template_name = 'blog/archive.html'
     context_object_name = 'posts'
@@ -46,11 +59,14 @@ def search(request):
 class CategoryView(DetailView):
     model = Category
     template_name = 'blog/art_list.html'
+    #context_object_name =
 
 class ArtView(DetailView):
     model = BlogPost
     template_name = 'blog/art_detail.html'
+    #context_object_name =
 
 class HomeView(ListView):
     model = Art
     template_name = 'blog/art_list.html'
+    #context_object_name =
